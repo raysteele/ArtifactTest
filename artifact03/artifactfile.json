@@ -29,7 +29,7 @@
 
 
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact02.ps1  parameters('stringParam1'), parameters('stringParam1') '\"')]"
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact03.ps1  parameters('stringParam1'), parameters('stringParam1') '\"')]"
   }
 }
 
