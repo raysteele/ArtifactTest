@@ -3,5 +3,5 @@ param(
     [string] $StringParam2
 )
 
-$StringParam1 | out-file newfile-Artifact02.txt
-$StringParam2 | out-file newfile-Artifact02.txt -Append
+$StringParam1 | out-file C:\Logs\newfile-Artifact02.txt
+$StringParam2 | out-file C:\Logs\newfile-Artifact02.txt -Append
