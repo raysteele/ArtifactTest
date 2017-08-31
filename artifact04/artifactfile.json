@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-  "title": "Artifact03",
+  "title": "Artifact04 Title",
   "publisher": "WSIPC",
-  "description": "Articact03 to test passing parameters to PS",
+  "description": "Articact04 to test passing parameters to PS",
   "tags": [
     "Windows",
     "Template"
@@ -29,7 +29,7 @@
 
 
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact02.ps1  parameters('stringParam1'), parameters('stringParam1') '\"')]"
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact04.ps1  parameters('stringParam1'), parameters('stringParam1') '\"')]"
   }
 }
 
