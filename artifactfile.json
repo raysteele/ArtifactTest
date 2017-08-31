@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+  "title": "Artifact03",
+  "publisher": "WSIPC",
+  "description": "Articact03 to test copy of file from Azure Blob.",
+  "tags": [
+    "Windows",
+    "Template"
+  ],
+  "targetOsType": "Windows",
+    "parameters": {
+    
+    "stringParam1": {
+      "type": "string",
+      "displayName": "String Parameter 1",
+      "description": "Any text string is allowed, including spaces.",
+      "defaultValue": "Default string param 1 value",
+      "allowEmpty": true
+    },
+
+    "stringParam2": {
+      "type": "string",
+      "displayName": "String Parameter 2",
+      "description": "Any text string is allowed, including spaces.",
+      "defaultValue": "Default string param 2 value",
+      "allowEmpty": true
+    },
+	}
+
+
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact02.ps1  parameters('stringParam1'), parameters('stringParam1') '\"')]"
+  }
+}
+
