@@ -9,14 +9,25 @@
   ],
   "targetOsType": "Windows",
   "parameters": {
-    "stringParam": {
+    
+  "stringParam1": {
       "type": "string",
-      "displayName": "String Parameter",
+      "displayName": "String Parameter 1",
       "description": "Any text string is allowed, including spaces.",
       "defaultValue": "Default string param value",
       "allowEmpty": true
     },
-    "securestringParam": {
+
+  "stringParam2": {
+      "type": "string",
+      "displayName": "String Parameter 2",
+      "description": "Any text string is allowed, including spaces.",
+      "defaultValue": "Default string param value",
+      "allowEmpty": true
+    },
+    
+
+   "securestringParam": {
       "type": "securestring",
       "displayName": "Secure String Parameter",
       "description": "Any text string is allowed, including spaces, and will be presented in UI as masked characters.",
