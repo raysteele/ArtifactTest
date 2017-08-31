@@ -14,7 +14,7 @@
       "type": "string",
       "displayName": "String Parameter 1",
       "description": "Any text string is allowed, including spaces.",
-      "defaultValue": "Default string param value",
+      "defaultValue": "Default string param value 1",
       "allowEmpty": true
     },
 
@@ -22,7 +22,7 @@
       "type": "string",
       "displayName": "String Parameter 2",
       "description": "Any text string is allowed, including spaces.",
-      "defaultValue": "Default string param value",
+      "defaultValue": "Default string param value 2",
       "allowEmpty": true
     },
     
