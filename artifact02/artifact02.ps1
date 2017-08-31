@@ -1,7 +1,7 @@
 param(
-    [string] $StringParam1Value,
-    [string] $StringParam2Value
+    [string] $StringParam1,
+    [string] $StringParam2
 )
 
-$StringParam1Value | out-file newfile-Artifact02.txt
-$StringParam2Value | out-file newfile-Artifact02.txt -Append
+$StringParam1 | out-file newfile-Artifact02.txt
+$StringParam2 | out-file newfile-Artifact02.txt -Append
