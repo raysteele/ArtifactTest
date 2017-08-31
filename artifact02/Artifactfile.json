@@ -28,7 +28,8 @@
 
   },
   "runCommand": {
-    "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File artifact02.ps1 parameters('stringParam1') parameters('stringParam2')"
+    "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File artifact02.ps1 ''' parameters('stringParam1') parameters('stringParam2')''' "
+  
 }
 }
 
