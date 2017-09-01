@@ -6,17 +6,17 @@
     "iconUri": "https://www.visualstudio.com/favicon.ico",
     "targetOsType": "Windows",
     "parameters": {
-        "Param1": {
+        "SecParam1": {
             "type": "securestring",
             "displayName": "SecParam1 Value",
             "description": "This is the Param1 Value description"
         },
-        "Param2": {
+        "SecParam2": {
             "type": "securestring",
             "displayName": "SecParam2 Value",
             "description": "This is the Param2 Value description"
         },
-        "Param3": {
+        "SecParam3": {
             "type": "securestring",
             "displayName": "SecParam3 Value",
             "description": "This is the Param3 Value description"
