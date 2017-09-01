@@ -1,11 +1,11 @@
 [CmdletBinding()]
 param(
-    [string] $Param1,
-    [string] $Param2,
-    [string] $Param3
+    [string] $SecParam1,
+    [string] $SecParam2,
+    [string] $SecParam3
 )
 
 ###################################################################################################
-$Param1 | out-file C:\Logs\newfile-Artifact01.txt
-$Param2 | out-file C:\Logs\newfile-Artifact01.txt -Append
-$Param3 | out-file C:\Logs\newfile-Artifact01.txt -Append
+$SecParam1 | out-file C:\Logs\newfile-Artifact01.txt
+$SecParam2 | out-file C:\Logs\newfile-Artifact01.txt -Append
+$SecParam3 | out-file C:\Logs\newfile-Artifact01.txt -Append
