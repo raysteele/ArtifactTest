@@ -1,42 +1,40 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "Artifact01 Run PowerShell",
-    "description": "Artifact01 Use this to run a script using PowerShell",
+    "title": "Download VSTS Drop and Run Script",
+    "description": "Downloads the latest build artifact for a given build definition and then executes a script from that drop.  The download will be in c:\\<build definition name>\\",
     "publisher": "Microsoft",
-    "tags": [
-        "PowerShell"
-    ],
-    "iconUri": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/Artifacts/windows-run-powershell/powershell.png",
+    "iconUri": "https://www.visualstudio.com/favicon.ico",
     "targetOsType": "Windows",
     "parameters": {
-        "scriptFileUris": {
-            "type": "array",
-            "displayName": "File URI(s)",
-            "description": "All the files to download to the VM for script execution. To specify multiple files, format them as a JSON array (e.g. [\"file1\", \"file2\"])."
-        },
-        "scriptToRun": {
+        "vstsProjectUri": {
             "type": "string",
-            "displayName": "Script to Run",
-            "description": "Script file to run."
+            "displayName": "VSTS Project URL",
+            "description": "The URL for the VSTS project that contains the build, eg https://accountName.visualstudio.com/defaultcollection/projectName"
+        },
+        "buildDefinitionName": {
+            "type": "string",
+            "displayName": "Build Definition Name",
+            "description": "Name of the build definition to be retrieved"
+        },
+        "PersonalAccessToken": {
+            "type": "securestring",
+            "displayName": "Personal Access Token",
+            "description": "Personal Access Token for accessing VSTS build"
+        },
+        "pathToScript": {
+            "type": "string",
+            "displayName": "Path to Script",
+            "description": "Path to Script for execution, eg 'drop\\bin\\Debug\\scriptName.ps1'"
         },
         "scriptArguments": {
             "type": "string",
             "displayName": "Script Arguments",
-            "description": "Arguments to pass to the script.",
-            "allowEmpty": true
+            "description": "Optional arguments for the script, eg '-username John -server localhost'",
+            "allowEmpty": true,
+            "defaultValue": ""
         }
     },
-    "runAzureVMExtension": {
-        "publisher": "Microsoft.Compute",
-        "type": "CustomScriptExtension",
-        "typeHandlerVersion": "1.8",
-        "autoUpgradeMinorVersion": "true",
-        "settings": {
-            "fileUris": "[parameters('scriptFileUris')]",
-            "commandToExecute": ""
-        },
-        "protectedSettings": {
-            "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File', ' ', parameters('scriptToRun'), ' ', parameters('scriptArguments'))]"
-        }
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./DownloadVstsDropAndExecuteScript.ps1', ' -accessToken ', parameters('PersonalAccessToken'), ' -buildDefinitionName ''', parameters('buildDefinitionName'), ''' -vstsProjectUri ''', parameters('vstsProjectUri'), ''' -pathToScript ''', parameters('pathToScript'), ''' -scriptArguments ''', parameters('scriptArguments'), '''\"')]"
     }
 }
