@@ -25,11 +25,11 @@
       "defaultValue": "Default string param value 2",
       "allowEmpty": true
     }
-    
-    }
+
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact03.ps1 -StringParam ''', parameters('stringParam1'), ''' -StringParam ('stringParam2'), '\"')]"
-  }
+    "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File artifact03.ps1 ''' parameters('stringParam1') parameters('stringParam2')''' "
+  
+}
 }
 
