@@ -1,0 +1,29 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+    "title": "Artifact01",
+    "description": "Artifact01 Description",
+    "publisher": "Acme",
+    "iconUri": "https://www.visualstudio.com/favicon.ico",
+    "targetOsType": "Windows",
+    "parameters": {
+        "Param1": {
+            "type": "string",
+            "displayName": "Param1 Value",
+            "description": "This is the Param1 Value description"
+        },
+        "Param2": {
+            "type": "string",
+            "displayName": "Param2 Value",
+            "description": "This is the Param2 Value description"
+        },
+        "Param3": {
+            "type": "string",
+            "displayName": "Param3 Value",
+            "description": "This is the Param3 Value description"
+        }
+        
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact01.ps1', ' -Param1 ', parameters('Param1'), ' -Param2 ', parameters('Param2'), ' -Param3, parameters('Param3') )]"
+    }
+}
