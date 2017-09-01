@@ -24,6 +24,6 @@
         
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact01.ps1', ' -Param1 ', parameters('Param1'), ' -Param2 ''', parameters('Param2'), ''' -Param3 ''')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./artifact01.ps1', ' -Param1 ', parameters('Param1'), ' -Param2 ', parameters('Param2'), ' -Param3, parameters('Param3') )]"
     }
 }
