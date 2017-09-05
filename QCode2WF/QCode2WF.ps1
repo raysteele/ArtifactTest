@@ -6,9 +6,9 @@ param(
 )
 
 ###################################################################################################
-$SecParamWFZipFile | out-file C:\Logs\newfile-Artifact01.txt
-$SecParamWFPath | out-file C:\Logs\newfile-Artifact01.txt -Append
-$SecParamSecretKey | out-file C:\Logs\newfile-Artifact01.txt -Append
+$SecParamWFZipFile | out-file C:\Logs\QCode2WF-Log.txt
+$SecParamWFPath | out-file C:\Logs\QCode2WF-Log.txt -Append
+$SecParamSecretKey | out-file C:\Logs\QCode2WF-Log.txt -Append
 
 
 #param ($zipfile,$SecureKey)
