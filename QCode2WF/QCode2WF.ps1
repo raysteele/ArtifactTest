@@ -18,6 +18,6 @@ $SecParamSecretKey | out-file C:\Logs\QCode2WF-Log.txt -Append
 
 net use \\$SecParamWFPath  /u:AZURE\samgtstd $SecParamSecretKey
 
-expand-archive $SecParamWFPath$SecParamWFZipFile -DestinationPath c:\ -Force
+expand-archive $SecParamWFPath\$SecParamWFZipFile -DestinationPath c:\ -Force
 
 Stop-Transcript
