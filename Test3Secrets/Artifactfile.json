@@ -24,6 +24,6 @@
         
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Test3Secrets.ps1', ' -SecParam1 ', parameters('SecParam1'), ' -SecParam2 ', parameters('SecParam2'), ' -SecParam3, parameters('SecParam3') )]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Test3Secrets.ps1', ' -SecParam1 ', parameters('SecParam1'), ' -SecParam2 ', parameters('SecParam2'), ' -SecParam3 ', parameters('SecParam3') )]"
     }
 }
