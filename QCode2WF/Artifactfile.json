@@ -24,6 +24,6 @@
         
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Test3Secrets.ps1', ' -SecParamWFZipFile ', parameters('SecParamWFZipFile'), ' -SecParamWFPath ', parameters('SecParamWFPath'), ' -SecParamSecretKey ', parameters('SecParamSecretKey') )]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./QCode2WF.ps1', ' -SecParamWFZipFile ', parameters('SecParamWFZipFile'), ' -SecParamWFPath ', parameters('SecParamWFPath'), ' -SecParamSecretKey ', parameters('SecParamSecretKey') )]"
     }
 }
