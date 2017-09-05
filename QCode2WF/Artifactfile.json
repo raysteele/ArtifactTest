@@ -16,7 +16,7 @@
             "displayName": "URI path",
             "description": "This is the path or URI to the zip file"
         },
-        "$SecParamSecretKey": {
+        "SecParamSecretKey": {
             "type": "securestring",
             "displayName": "Secure Key",
             "description": "This is the Secure Key Value description"
