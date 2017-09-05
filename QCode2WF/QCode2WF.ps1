@@ -13,6 +13,6 @@ $SecParamSecretKey | out-file C:\Logs\QCode2WF-Log.txt -Append
 
 #param ($zipfile,$SecureKey)
 
-#net use \\samgtstd.file.core.windows.net\release  /u:AZURE\samgtstd $SecureKey
+net use \$SecParamWFPath  /u:AZURE\samgtstd $SecParamSecretKey
 
-#expand-archive \\samgtstd.file.core.windows.net\release\$zipfile -DestinationPath f:\ -Force
+expand-archive $SecParamWFPath$SecParamWFZipFile -DestinationPath c:\ -Force
