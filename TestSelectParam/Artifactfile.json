@@ -28,8 +28,9 @@
 	    "defaultValue": "test1",
             "allowEmpty": false,
             "allowedValues": [
-            "test1",
-            "test2"
+            "Test1Value",
+            "Test2Value",
+	    "Test3Value"
             ]
         }
     },
