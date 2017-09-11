@@ -25,7 +25,7 @@
             "type": "selectParam",
             "displayName": "SecParam1 Value",
             "description": "This is the Param3 Value description",
-	    "defaultValue": "test1",
+	    "defaultValue": "test1Value",
             "allowEmpty": false,
             "allowedValues": [
             "Test1Value",
