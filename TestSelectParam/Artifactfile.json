@@ -22,15 +22,15 @@
             "description": "This is the Param3 Value description"
         },
         "SelectParam1": {
-            "type": "selectParam",
+            "type": "string",
             "displayName": "SecParam1 Value",
             "description": "This is the Param3 Value description",
-	    "defaultValue": "test1Value",
+	        "defaultValue": "Test1Value",
             "allowEmpty": false,
             "allowedValues": [
             "Test1Value",
             "Test2Value",
-	    "Test3Value"
+	        "Test3Value"
             ]
         }
     },
