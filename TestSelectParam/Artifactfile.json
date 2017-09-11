@@ -1,0 +1,29 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+    "title": "Test3Secrets",
+    "description": "Test3Secrets Testing SecureStrings for parameters",
+    "publisher": "Acme",
+    "iconUri": "https://www.visualstudio.com/favicon.ico",
+    "targetOsType": "Windows",
+    "parameters": {
+        "SecParam1": {
+            "type": "securestring",
+            "displayName": "SecParam1 Value",
+            "description": "This is the Param1 Value description"
+        },
+        "SecParam2": {
+            "type": "securestring",
+            "displayName": "SecParam2 Value",
+            "description": "This is the Param2 Value description"
+        },
+        "SecParam3": {
+            "type": "securestring",
+            "displayName": "SecParam3 Value",
+            "description": "This is the Param3 Value description"
+        }
+        
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Test3Secrets.ps1', ' -SecParam1 ', parameters('SecParam1'), ' -SecParam2 ', parameters('SecParam2'), ' -SecParam3 ', parameters('SecParam3') )]"
+    }
+}
