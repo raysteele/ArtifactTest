@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "SQLRestore",
-    "description": "Test restore of SQL Database",
+    "title": "Q-SQLRestore",
+    "description": "Q-Test restore of SQL Database",
     "publisher": "Acme",
     "iconUri": "https://www.visualstudio.com/favicon.ico",
     "targetOsType": "Windows",

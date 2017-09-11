@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "Test Select Param",
-    "description": "Test Select Param",
+    "title": "Q-Test Select Param",
+    "description": "Test Select Mutiple Params",
     "publisher": "Acme",
     "iconUri": "https://www.visualstudio.com/favicon.ico",
     "targetOsType": "Windows",
@@ -24,7 +24,7 @@
         "SelectParam1": {
             "type": "selectParam",
             "displayName": "SecParam1 Value",
-            "description": "This is the Param3 Value description"
+            "description": "This is the Param3 Value description",
 	    "defaultValue": "test1",
             "allowEmpty": false,
             "allowedValues": [
@@ -35,6 +35,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Test3Secrets.ps1', ' -SecParam1 ', parameters('SecParam1'), ' -SecParam2 ', parameters('SecParam2'), ' -SecParam3 ', parameters('SecParam3') )]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./TestSelectParam.ps1', ' -SecParam1 ', parameters('SecParam1'), ' -SecParam2 ', parameters('SecParam2'), ' -SecParam3 ', parameters('SecParam3') )]"
     }
 }
