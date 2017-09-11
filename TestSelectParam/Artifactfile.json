@@ -23,8 +23,8 @@
         },
         "SelectParam1": {
             "type": "string",
-            "displayName": "SecParam1 Value",
-            "description": "This is the Param3 Value description",
+            "displayName": "Select Param1 Value",
+            "description": "This is the SelectParam1 Value description",
 	        "defaultValue": "Test1Value",
             "allowEmpty": false,
             "allowedValues": [
